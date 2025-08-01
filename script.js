@@ -19,6 +19,7 @@ const coconutName = document.getElementById("coconut-name");
 const resultText = document.getElementById("result");
 const resetBtn = document.getElementById("reset-btn");
 const coconutVideo = document.getElementById("coconut-video");
+const coconutVideoSource = coconutVideo.querySelector("source");
 
 let currentCoconutType = "";
 
@@ -32,9 +33,7 @@ blessingForm.addEventListener("submit", (e) => {
 
   coconutImage.src = `images/${randomType}.png`;
   coconutImage.alt = `${randomType} coconut`;
-  coconutImage.className = ""; // Reset animations
 
-  coconutName.textContent = `🥥 ${capitalize(randomType)} Coconut`;
   coconutSection.classList.remove("hidden");
   resultText.textContent = "Click the coconut to break it!";
   resetBtn.classList.add("hidden");
@@ -65,7 +64,7 @@ resetBtn.addEventListener("click", () => {
   coconutVideo.classList.add("hidden");
 });
 
-// --- Random Result Logic ---
+// --- Coconut Outcome Logic ---
 function rollCoconut(type) {
   const outcomes = coconutTypes[type];
   const rand = Math.random();
@@ -76,29 +75,23 @@ function rollCoconut(type) {
     if (rand <= cumulative) return outcome;
   }
 
-  return "bounce"; // fallback
+  return "bounce";
 }
 
 // --- Show Result: Video, Sound, Text ---
 function showResult(outcome) {
   const videoPath = `images/after/${currentCoconutType}_${outcome}.mp4`;
-  const imagePath = `images/after/${currentCoconutType}_${outcome}.png`;
 
-  coconutVideo.src = videoPath;
-  coconutVideo.classList.remove("hidden");
+  // Set video source and play
+  coconutVideoSource.src = videoPath;
   coconutVideo.load();
+  coconutVideo.classList.remove("hidden");
   coconutVideo.play();
 
-  coconutVideo.onended = () => {
-    coconutVideo.classList.add("hidden");
-    coconutImage.src = imagePath;
-    coconutImage.classList.remove("hidden");
-  };
-
-  // Set message
+  // Set result message
   resultText.textContent = getResultMessage(outcome);
 
-  // Play sound
+  // Play corresponding sound
   const soundMap = {
     perfect: "crack.mp3",
     imperfect: "crack.mp3",
@@ -115,16 +108,15 @@ function showResult(outcome) {
   resetBtn.classList.remove("hidden");
 }
 
-// --- Helper Functions ---
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
+// --- Audio Helper ---
 function playSound(filename) {
   const audio = new Audio(`sounds/${filename}`);
-  audio.play();
+  audio.play().catch((err) => {
+    console.warn("Audio play blocked or failed:", err);
+  });
 }
 
+// --- Result Message Helper ---
 function getResultMessage(result) {
   switch (result) {
     case "perfect":
@@ -144,7 +136,7 @@ function getResultMessage(result) {
   }
 }
 
-// --- Random Fact Display ---
+// --- Random Coconut Fact ---
 const coconutFacts = [
   "Coconuts are actually seeds, not nuts!",
   "Coconut water was used as emergency IV fluid during WWII.",
