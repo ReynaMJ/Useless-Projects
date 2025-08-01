@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 850px;
   margin: 0 auto;
   padding: 2rem;
   background-color: #fff8ec;
@@ -14,7 +14,7 @@ body {
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
   text-align: center;
 
-  min-height: 800px; /* or height: 700px; */
+  min-height: 450px; /* or height: 700px; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Or center */
@@ -92,7 +92,9 @@ button:hover {
   font-size: 1.5rem;
 }
 #coconut-video {
+
   max-width: 100%;
+  width: 400px;
   height: auto;
   border-radius: 12px;
   display: block;
