@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ഒരു തേങ്ങ ഒടച്ചാലോ?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🥥 ഒരു തേങ്ങ ഒടച്ചാലോ? 🥥</h1>
+
+    <!-- Blessing Form -->
+    <form id="blessing-form">
+      <input
+        type="text"
+        id="blessing-input"
+        placeholder="What do you want to bless?"
+        required
+      />
+      <button type="submit">Summon Coconut</button>
+    </form>
+
+    <!-- Coconut Display Area -->
+    <div id="coconut-section" class="hidden">
+      <p id="coconut-name"></p>
+
+      <div id="coconut-media">
+        <img
+          id="coconut-image"
+          src=""
+          alt="Coconut"
+          style="cursor: pointer;"
+        />
+        <video
+          id="coconut-video"
+          class="hidden"
+          
+          autoplay
+          muted
+          playsinline
+        >
+          <source src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <!-- Result Text -->
+    <p id="result"></p>
+
+    <!-- Reset Button -->
+    <button id="reset-btn" class="hidden">🔁 Try Another</button>
+  </div>
+
+  <!-- Fact Box -->
+  <div class="fact-box">
+    <h2>🥥 Coconut Fact of the Moment</h2>
+    <p id="coconut-fact">Did you know coconuts can float across oceans to spread?</p>
+  </div>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>
