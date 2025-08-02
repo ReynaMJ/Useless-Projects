@@ -13,7 +13,7 @@
 - Member 2: Keerthana John - Model Engineering College, Thrikkakara
 
 ### Project Description
-Feeling lucky? Break a coconut, bless your goals, and let fate decide! Each coconut holds a surprise—from perfect cracks to soap imposters and chocolate jackpots. A hilariously to test your fortune.
+Feeling lucky? Break a coconut, bless your goals, and let fate decide! Each coconut holds a surprise—from perfect cracks to soap imposters and chocolate jackpots. A hilarious way to test your fortune.
 
 ### The Problem (that doesn't exist)
 What if you needed to break a coconut but dont have the strength or the coconut to break? 
