@@ -11,6 +11,7 @@ const coconutTypes = {
 };
 
 // --- DOM Elements ---
+const coconutTypeLine = document.getElementById("coconut-type");
 const blessingForm = document.getElementById("blessing-form");
 const blessingInput = document.getElementById("blessing-input");
 const coconutImage = document.getElementById("coconut-image");
@@ -62,6 +63,7 @@ resetBtn.addEventListener("click", () => {
 
   coconutImage.classList.remove("hidden");
   coconutVideo.classList.add("hidden");
+  coconutTypeLine.classList.add("hidden");
 });
 
 // --- Coconut Outcome Logic ---
@@ -87,6 +89,11 @@ function showResult(outcome) {
   coconutVideo.load();
   coconutVideo.classList.remove("hidden");
   coconutVideo.play();
+
+  coconutVideo.onended = () => {
+  coconutTypeLine.textContent = `That was a ${currentCoconutType} coconut!`;
+  coconutTypeLine.classList.remove("hidden");
+};
 
   // Set result message
   resultText.textContent = getResultMessage(outcome);

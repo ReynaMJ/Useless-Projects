@@ -1,15 +1,16 @@
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  background: #fef9e7;
+  background: #c4ffc7;
   text-align: center;
   padding: 2rem;
 }
 
 .container {
   max-width: 850px;
+  border: 4px dashed #caa85d;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #fff8ec;
+  background-color: #fee7c0;
   border-radius: 1rem;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
   text-align: center;
@@ -74,8 +75,8 @@ button:hover {
 }
 
 .fact-box {
-  background-color: #fff8dc;
-  border: 2px dashed #caa85d;
+  background-color: #f8e8aa;
+  border: 4px dashed #caa85d;
   padding: 1.5rem;
   margin: 2rem auto;
   width: 80%;
@@ -98,4 +99,12 @@ button:hover {
   height: auto;
   border-radius: 12px;
   display: block;
+}
+
+#coconut-type {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #040404;
+  text-align: center;
 }
