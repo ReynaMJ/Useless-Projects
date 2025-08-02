@@ -42,10 +42,10 @@ For Software:
 ![Screenshot1](homepage.png)
 This is the homepage of the website! It has a form to ask for what exactly you want to bless, a button to summon a coconut and a random coconut fact at the bottom of the webpage!
 
-![Screenshot2](coconut summoned.png)
+![Screenshot2](coconut_summoned.png)
 After entering your project and pressing the button, a random coconut will be assigned to you!
 
-![Screenshot3](coconut break.png)
+![Screenshot3](coconut_break.png)
 To break the coconut, you have to click it. On clicking the image based on the coconut and an rng, you will get a certain possibility of the coconut actually breaking in half!
 
 ### Project Demo
