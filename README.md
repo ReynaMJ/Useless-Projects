@@ -50,7 +50,7 @@ To break the coconut, you have to click it. On clicking the image based on the c
 
 ### Project Demo
 # Video
-![demo.mp4](demo.mp4)
+[demo.mp4](demo.mp4)
 *This video shows you exactly how to use our website to bless your project(with good/bad fortune) *
 
 ## Team Contributions
